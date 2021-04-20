@@ -1,0 +1,116 @@
+$base-color: #0657a8;
+$base-text-color: #666;
+
+footer {
+    .footer-left-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .footer-image {
+            height: 144px;
+            display: flex;
+            margin-bottom: 1rem;
+    
+            img {
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    
+        .footer-social-media {
+            display: flex;
+        
+            .social-media-icon {
+              margin-left: 1rem;
+              border: 1px solid #eaeaea;
+              background-color: $base-color;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 32px;
+              height: 32px;
+              color: #fff;
+      
+              &:hover {
+                background: #fff;
+              }
+      
+              i {
+                margin: 8px 8px
+              }
+            }
+      
+            .facebook {
+              &:hover {
+                color: #4867aa;
+              }
+            }
+      
+            .twitter {
+              &:hover {
+                color: #4c9be5;
+              }
+            }
+      
+            .instagram {
+              &:hover {
+                color: #df002d;
+              }
+            }
+          }
+    }
+
+    .footer-center-container {
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .footer-nav-header {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: .5rem;
+        }
+
+        .footer-menu {
+            list-style: none;
+            padding: 0;
+
+            .footer-menu-item {
+                padding: .25rem 0;
+                
+                a {
+                    color: $base-text-color;
+                    font-size: .9rem;
+                    display: flex;
+
+                    i {
+                      color: $base-color;
+                      margin-right: .25rem;
+                      min-width: 24px;
+                    }
+
+                    &:hover {
+                        color: $base-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-right-container {
+      padding: 2rem 1rem;
+    }
+
+    .copyright-left-container,
+    .copyright-right-container {
+      font-size: .9rem;
+      color: #777;
+    }
+
+    .copyright-right-container {
+      text-align: right;
+    }
+}

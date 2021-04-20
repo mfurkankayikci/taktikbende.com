@@ -31,6 +31,12 @@ $gutter: 8px;
           color: $base-text-color;
           font-size: 13px;
         }
+
+        &:hover {
+          span {
+            color: $base-color;
+          }
+        }
       }
     }
   
@@ -82,12 +88,44 @@ $gutter: 8px;
       }
     }
   }
+
+  @media only screen and (max-width: 900px) {
+    .toolbar-content {
+      .contact {
+        .contact-item {
+          margin-right: $gutter * 1;
+          border: 1px solid #eaeaea;
+          display: flex;
+          align-items: center;
+          width: 32px;
+          height: 32px;
+          color: #666;
+
+          &:hover {
+            background: #fff;
+          }
+
+          i {
+            font-size: 16px;
+            color: $base-text-color;
+            margin-right: $gutter;
+            margin: 8px;
+          }
+
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 #navbar {
   width: 100%;
   background: #fff;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  min-height: 72px;
 
   .container {
     position: relative;
@@ -104,6 +142,7 @@ $gutter: 8px;
       background: #fff;
       border-bottom: 4px solid $base-color;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      z-index: 2;
 
       img {
         width: 100%;
@@ -113,10 +152,10 @@ $gutter: 8px;
     }
 
     .navbar-menu {
-      min-height: 72px;
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      height: 72px;
 
       a {
         font-size: 14px;
@@ -149,6 +188,30 @@ $gutter: 8px;
         &:hover {
           background-color: lighten($base-color, $amount: 5);
         }
+      }
+    }
+
+    .mobile-navbar-menu {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    .container {
+      .navbar-brand {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .navbar-menu {
+        display: none;
+      }
+
+      .mobile-navbar-menu {
+        height: 72px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
       }
     }
   }

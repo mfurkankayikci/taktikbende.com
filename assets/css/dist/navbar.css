@@ -26,6 +26,9 @@
   color: #666;
   font-size: 13px;
 }
+#toolbar .toolbar-content .contact .contact-item:hover span {
+  color: #0657a8;
+}
 #toolbar .toolbar-content .social-media {
   display: flex;
   justify-content: flex-end;
@@ -61,11 +64,35 @@
   border: 1px solid #df002d;
   color: #fff;
 }
+@media only screen and (max-width: 900px) {
+  #toolbar .toolbar-content .contact .contact-item {
+    margin-right: 8px;
+    border: 1px solid #eaeaea;
+    display: flex;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    color: #666;
+  }
+  #toolbar .toolbar-content .contact .contact-item:hover {
+    background: #fff;
+  }
+  #toolbar .toolbar-content .contact .contact-item i {
+    font-size: 16px;
+    color: #666;
+    margin-right: 8px;
+    margin: 8px;
+  }
+  #toolbar .toolbar-content .contact .contact-item span {
+    display: none;
+  }
+}
 
 #navbar {
   width: 100%;
   background: #fff;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  min-height: 72px;
 }
 #navbar .container {
   position: relative;
@@ -82,6 +109,7 @@
   background: #fff;
   border-bottom: 4px solid #0657a8;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  z-index: 2;
 }
 #navbar .container .navbar-brand img {
   width: 100%;
@@ -89,10 +117,10 @@
   object-fit: contain;
 }
 #navbar .container .navbar-menu {
-  min-height: 72px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  height: 72px;
 }
 #navbar .container .navbar-menu a {
   font-size: 14px;
@@ -114,4 +142,22 @@
 }
 #navbar .container .navbar-menu a.navbar-contact-link:active, #navbar .container .navbar-menu a.navbar-contact-link:hover {
   background-color: #0764c1;
+}
+#navbar .container .mobile-navbar-menu {
+  display: none;
+}
+@media only screen and (max-width: 900px) {
+  #navbar .container .navbar-brand {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #navbar .container .navbar-menu {
+    display: none;
+  }
+  #navbar .container .mobile-navbar-menu {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
 }

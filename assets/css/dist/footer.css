@@ -1,0 +1,86 @@
+footer .footer-left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+footer .footer-left-container .footer-image {
+  height: 144px;
+  display: flex;
+  margin-bottom: 1rem;
+}
+footer .footer-left-container .footer-image img {
+  height: 100%;
+  object-fit: contain;
+}
+footer .footer-left-container .footer-social-media {
+  display: flex;
+}
+footer .footer-left-container .footer-social-media .social-media-icon {
+  margin-left: 1rem;
+  border: 1px solid #eaeaea;
+  background-color: #0657a8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  color: #fff;
+}
+footer .footer-left-container .footer-social-media .social-media-icon:hover {
+  background: #fff;
+}
+footer .footer-left-container .footer-social-media .social-media-icon i {
+  margin: 8px 8px;
+}
+footer .footer-left-container .footer-social-media .facebook:hover {
+  color: #4867aa;
+}
+footer .footer-left-container .footer-social-media .twitter:hover {
+  color: #4c9be5;
+}
+footer .footer-left-container .footer-social-media .instagram:hover {
+  color: #df002d;
+}
+footer .footer-center-container {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+footer .footer-center-container .footer-nav-header {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+footer .footer-center-container .footer-menu {
+  list-style: none;
+  padding: 0;
+}
+footer .footer-center-container .footer-menu .footer-menu-item {
+  padding: 0.25rem 0;
+}
+footer .footer-center-container .footer-menu .footer-menu-item a {
+  color: #666;
+  font-size: 0.9rem;
+  display: flex;
+}
+footer .footer-center-container .footer-menu .footer-menu-item a i {
+  color: #0657a8;
+  margin-right: 0.25rem;
+  min-width: 24px;
+}
+footer .footer-center-container .footer-menu .footer-menu-item a:hover {
+  color: #0657a8;
+}
+footer .footer-right-container {
+  padding: 2rem 1rem;
+}
+footer .copyright-left-container,
+footer .copyright-right-container {
+  font-size: 0.9rem;
+  color: #777;
+}
+footer .copyright-right-container {
+  text-align: right;
+}

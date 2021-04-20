@@ -44,6 +44,10 @@
   font-size: 13px;
 }
 
+#toolbar .toolbar-content .contact .contact-item:hover span {
+  color: #0657a8;
+}
+
 #toolbar .toolbar-content .social-media {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,11 +100,40 @@
   color: #fff;
 }
 
+@media only screen and (max-width: 900px) {
+  #toolbar .toolbar-content .contact .contact-item {
+    margin-right: 8px;
+    border: 1px solid #eaeaea;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 32px;
+    height: 32px;
+    color: #666;
+  }
+  #toolbar .toolbar-content .contact .contact-item:hover {
+    background: #fff;
+  }
+  #toolbar .toolbar-content .contact .contact-item i {
+    font-size: 16px;
+    color: #666;
+    margin-right: 8px;
+    margin: 8px;
+  }
+  #toolbar .toolbar-content .contact .contact-item span {
+    display: none;
+  }
+}
+
 #navbar {
   width: 100%;
   background: #fff;
   -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  min-height: 72px;
 }
 
 #navbar .container {
@@ -126,6 +159,7 @@
   border-bottom: 4px solid #0657a8;
   -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  z-index: 2;
 }
 
 #navbar .container .navbar-brand img {
@@ -136,7 +170,6 @@
 }
 
 #navbar .container .navbar-menu {
-  min-height: 72px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,6 +179,7 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  height: 72px;
 }
 
 #navbar .container .navbar-menu a {
@@ -173,5 +207,30 @@
 
 #navbar .container .navbar-menu a.navbar-contact-link:active, #navbar .container .navbar-menu a.navbar-contact-link:hover {
   background-color: #0764c1;
+}
+
+#navbar .container .mobile-navbar-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  #navbar .container .navbar-brand {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  #navbar .container .navbar-menu {
+    display: none;
+  }
+  #navbar .container .mobile-navbar-menu {
+    height: 72px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+  }
 }
 /*# sourceMappingURL=navbar.css.map */
