@@ -1,11 +1,12 @@
 $base-color: #0657a8;
 $base-text-color: #666;
 
-#last-products {
+.last-products,
+.all-products {
     padding: 4rem 0;
     .section-title {
         position: relative;
-        font-size: 2rem;
+        font-size: var(--text-xxl);
         font-weight: 700;
         text-align: center;
         padding: .5rem 0;
@@ -88,20 +89,20 @@ $base-text-color: #666;
 
                 .product-title {
                     font-weight: 600;
-                    font-size: 1.2rem;
+                    font-size: var(--text-md);
                     max-height: 56px;
                 }
 
                 .product-sub-title {
                     color: $base-text-color;
                     margin: 0.5rem 0 1rem 0;
-                    font-size: .9rem;
+                    font-size: var(--text-sm);
                     max-height: 24px;
                 }
 
                 .product-text {
                     color: $base-text-color;
-                    font-size: .9rem;
+                    font-size: var(--text-sm);
                     max-height: 96px;
                     overflow-y: auto;
                 }
@@ -132,4 +133,8 @@ $base-text-color: #666;
         }
     }
 
+}
+
+.all-products {
+    padding: 2rem 0;
 }

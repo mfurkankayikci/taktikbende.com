@@ -11,16 +11,16 @@ footer {
             height: 144px;
             display: flex;
             margin-bottom: 1rem;
-    
+
             img {
                 height: 100%;
                 object-fit: contain;
             }
         }
-    
+
         .footer-social-media {
             display: flex;
-        
+
             .social-media-icon {
               margin-left: 1rem;
               border: 1px solid #eaeaea;
@@ -31,28 +31,28 @@ footer {
               width: 32px;
               height: 32px;
               color: #fff;
-      
+
               &:hover {
                 background: #fff;
               }
-      
+
               i {
                 margin: 8px 8px
               }
             }
-      
+
             .facebook {
               &:hover {
                 color: #4867aa;
               }
             }
-      
+
             .twitter {
               &:hover {
                 color: #4c9be5;
               }
             }
-      
+
             .instagram {
               &:hover {
                 color: #df002d;
@@ -68,7 +68,7 @@ footer {
         justify-content: flex-start;
 
         .footer-nav-header {
-            font-size: 1.2rem;
+            font-size: var(--text-lg);
             font-weight: 600;
             color: #333;
             margin-bottom: .5rem;
@@ -80,10 +80,10 @@ footer {
 
             .footer-menu-item {
                 padding: .25rem 0;
-                
+
                 a {
                     color: $base-text-color;
-                    font-size: .9rem;
+                    font-size: var(--text-sm);
                     display: flex;
 
                     i {
@@ -106,7 +106,7 @@ footer {
 
     .copyright-left-container,
     .copyright-right-container {
-      font-size: .9rem;
+      font-size: var(--text-sm);
       color: #777;
     }
 
