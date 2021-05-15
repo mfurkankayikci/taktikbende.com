@@ -19,7 +19,7 @@ $base-text-color: #666;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            background-color: $base-color;
+            background-color: var(--base-color);
         }
     }
 

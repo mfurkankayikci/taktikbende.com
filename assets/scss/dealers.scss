@@ -1,0 +1,255 @@
+$base-color: #0657a8;
+$base-text-color: #666;
+
+.our-dealers {
+  padding: 4rem 2rem;
+
+  .section-title {
+    position: relative;
+    font-size: var(--text-xxl);
+    font-weight: 700;
+    text-align: center;
+    padding: .5rem 0;
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 96px;
+      height: 4px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--base-color);
+    }
+  }
+
+  .dealer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .dealer {
+      position: relative;
+      height: 100px;
+      width: calc((100% - 6rem) / 3);
+      padding: 1rem;
+      margin: 1rem;
+      box-shadow: var(--shadow);
+
+      .code {
+        position: absolute;
+        bottom: -1.5rem;
+        right: .5rem;
+        font-size: var(--text-xxxl);
+        font-weight: var(--fw-bold);
+        opacity: .05;
+        cursor: none;
+        pointer-events: none;
+      }
+
+      .title {
+        font-weight: 600;
+        font-size: large;
+      }
+
+      .county {
+        font-size: var(--text-sm);
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #eaeaea;
+        padding-bottom: .5rem;
+      }
+
+      .phone {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+
+        i {
+          font-size: var(--text-md);
+          margin-right: .5rem;
+          color: var(--base-color);
+        }
+
+        span {
+          font-size: var(--text-sm);
+        }
+      }
+
+      .address {
+        display: flex;
+        align-items: flex-start;
+
+        i {
+          font-size: var(--text-md);
+          margin-right: .5rem;
+          color: var(--base-color);
+        }
+
+        span {
+          font-size: var(--text-sm);
+        }
+      }
+
+      .notice-button {
+        margin-top: .5rem;
+        border: 1px solid #333;
+        padding: .5rem 1rem;
+        color: #333;
+        font-weight: 600;
+        font-size: var(--text-sm);
+        transition: all .2s ease-in-out;
+
+        &:active,
+        &:hover {
+          background-color: var(--base-color);
+          border-color: var(--base-color);
+          color: #fff;
+        }
+      }
+
+      .modal-window {
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.9);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9999;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s;
+
+        &:target {
+          visibility: visible;
+          opacity: 1;
+          pointer-events: auto;
+        }
+        & > div {
+          max-width: 1180px;
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 2em;
+          background: white;
+          box-shadow: var(--shadow);
+        }
+        header {
+          font-weight: bold;
+        }
+        h1 {
+          font-size: 150%;
+          margin: 0 0 15px;
+        }
+        .modal-close {
+          color: #aaa;
+          line-height: 50px;
+          font-size: 80%;
+          position: absolute;
+          right: 1rem;
+          text-align: center;
+          top: 0;
+          width: 70px;
+          text-decoration: none;
+          &:hover {
+            color: black;
+          }
+        }
+        & > div {
+          border-radius: 1rem;
+        }
+        div:not(:last-of-type) {
+          margin-bottom: 15px;
+        }
+
+        .dealer-item-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          max-height: 97vh;
+          overflow-y: scroll;
+
+          .dealer-item {
+            position: relative;
+            height: 200px;
+            width: calc((100% - 6rem) / 3);
+            padding: 1rem;
+            margin: 1rem;
+            box-shadow: var(--shadow);
+
+            .code {
+              position: absolute;
+              bottom: -1.5rem;
+              right: .5rem;
+              font-size: var(--text-xxxl);
+              font-weight: var(--fw-bold);
+              opacity: .05;
+              cursor: none;
+              pointer-events: none;
+            }
+
+            .title {
+              font-weight: 600;
+              font-size: large;
+            }
+
+            .county {
+              font-size: var(--text-sm);
+              margin-bottom: 1rem;
+              border-bottom: 1px solid #eaeaea;
+              padding-bottom: .5rem;
+            }
+
+            .phone {
+              display: flex;
+              align-items: flex-start;
+              margin-bottom: 1rem;
+
+              i {
+                font-size: var(--text-md);
+                margin-right: .5rem;
+                color: var(--base-color);
+              }
+
+              span {
+                font-size: var(--text-sm);
+              }
+            }
+
+            .address {
+              display: flex;
+              align-items: flex-start;
+
+              i {
+                font-size: var(--text-md);
+                margin-right: .5rem;
+                color: var(--base-color);
+              }
+
+              span {
+                font-size: var(--text-sm);
+              }
+            }
+
+            @media only screen and (max-width: 900px) {
+              width: calc((100% - 4rem) / 2);
+            }
+
+            @media only screen and (max-width: 600px) {
+              width: calc((100% - 2rem) / 1);
+            }
+          }
+        }
+      }
+      @media only screen and (max-width: 900px) {
+        width: calc((100% - 4rem) / 2);
+      }
+
+      @media only screen and (max-width: 600px) {
+        width: calc((100% - 2rem) / 1);
+      }
+    }
+  }
+}
