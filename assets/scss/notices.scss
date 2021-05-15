@@ -1,7 +1,8 @@
 $base-color: #0657a8;
 $base-text-color: #666;
 
-#notices {
+.notices,
+.all-notices{
     padding: 4rem 0;
     background: #0657a8;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #0b3d70, #0657a8);  /* Chrome 10-25, Safari 5.1-6 */
@@ -63,7 +64,7 @@ $base-text-color: #666;
                         bottom: 0;
                         left: 50%;
                         transform: translateX(-50%);
-                        background-color: $base-color;
+                        background-color: var(--base-color);
                     }
                 }
             }
@@ -80,7 +81,7 @@ $base-text-color: #666;
 
                     i {
                         margin-right: .5rem;
-                        color: $base-color;
+                        color: var(--base-color);
                     }
 
                     span {
@@ -112,18 +113,36 @@ $base-text-color: #666;
                 .notice-detail-link {
                     color: #fff;
                     margin: 1rem 0;
-                    background-color: $base-color;
+                    background-color: var(--base-color);
                     padding: 1rem 2rem;
                     transition: all .2s ease-in-out;
                     width: 168px;
+                    $base-color: #0657a8;
 
                     &:active,
                     &:hover {
-                    background-color: lighten($base-color, $amount: 5);
+                        background-color: lighten($base-color, $amount: 5);
                     }
                 }
             }
         }
     }
 
+}
+
+.all-notices {
+    padding: 2rem 0;
+    background: none;
+
+    .section-title {
+        color: var(--base-text-color-primary);
+
+        &:after {
+            background-color: var(--base-text-color-primary);
+        }
+    }
+
+    .notice {
+        box-shadow: var(--shadow);
+    }
 }

@@ -1,0 +1,121 @@
+.contact-us {
+  padding: 4rem 2rem;
+
+  .section-title {
+    position: relative;
+    font-size: var(--text-xxl);
+    font-weight: 700;
+    text-align: center;
+    padding: .5rem 0;
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 96px;
+      height: 4px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--base-color);
+    }
+  }
+
+  .contact-us-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .left-container {
+      padding: 2rem 1rem;
+      flex-basis: 50%;
+
+      h2 {
+        margin-bottom: 3rem;
+        font-weight: var(--fw-bold);
+      }
+
+      .contact-us-item {
+        margin-bottom: 2rem;
+
+        p {
+          margin-bottom: 2rem;
+          width: 50%;
+        }
+
+        .contact-us-link {
+          color:  var(--base-color);
+          border: 1px solid var(--base-color);
+          padding: 1rem 2rem;
+          transition: all .2s ease-in-out;
+          $base-color: #0657a8;
+
+          &:active,
+          &:hover {
+            background-color: lighten($base-color, $amount: 5);
+            color: #fff;
+          }
+        }
+      }
+
+      .contact-us-social {
+        display: inline-flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+        padding: 1rem 1rem 1rem 0;
+
+        .contact-us-social-link {
+          margin-right: 1rem;
+          color: var(--base-text-color-secondary);
+
+          &:active,
+          &:hover {
+            color: var(--base-color);
+          }
+        }
+      }
+    }
+
+
+
+    .right-container {
+      padding: 2rem 1rem;
+      flex-basis: 50%;
+
+      form {
+        width: 100%;
+
+        input,
+        textarea {
+          border-radius: 0;
+        }
+
+        button {
+          border-radius: 0;
+          padding: 1rem 2rem;
+          background: var(--base-color);
+
+          &:active,
+          &:hover,
+          &:focus {
+            background-color: lighten($base-color, $amount: 5);
+            color: #fff;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 900px) {
+      .left-container,
+      .right-container {
+        flex-basis: 100%;
+
+        .contact-us-item {
+          p {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
