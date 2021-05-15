@@ -1,0 +1,22 @@
+.about-us {
+  padding: 4rem 0;
+}
+.about-us .section-title {
+  position: relative;
+  font-size: var(--text-xxl);
+  font-weight: 700;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+.about-us .section-title:after {
+  position: absolute;
+  content: "";
+  width: 96px;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--base-color);
+}
+
+/*# sourceMappingURL=about-us.css.map */
